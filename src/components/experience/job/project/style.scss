@@ -1,0 +1,21 @@
+.item .project {
+    .project-title {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: #42A8C0;
+      }
+      .time {
+        position: relative;
+        font-size: 13px;
+        padding-left: 3px
+      }
+      .details {
+        padding-left: 10px;
+      }
+      .details span.fa.fa-check-square-o {
+        font-size: 10px;
+        margin-right: 3px
+      }
+}

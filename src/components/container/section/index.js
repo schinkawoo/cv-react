@@ -6,7 +6,7 @@ import './style.css'
 export default ({ children, icon, type, title ='' }) => {
     const classes = classNames({
         'section': true,
-        [type]: !!type
+        [`${type}-section`]: !!type
     })
 
     return (

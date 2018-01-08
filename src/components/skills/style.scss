@@ -1,0 +1,55 @@
+.skillset {
+    .item {
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+    
+    .level-title {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    
+    .level-bar {
+        height: 12px;
+        background: #f5f5f5;
+    }
+    
+    .level-bar-inner {
+        height: 12px;
+        background: #7bc2d3;
+    }
+
+    .level-bar-fields {
+        width: 100%;
+        z-index: 10;
+        height: 12px;
+        margin-top: -12px;
+        display: flex;
+
+        .level-bar-field {
+            flex: 1;
+            height: 12px;
+            border-right: 1px solid#f5f5f5;
+        }
+
+        .level-bar-field:last-child {
+            flex: 1;
+            height: 12px;
+            border-right: none;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .level-title {
+            float: left;
+            width: 30%;
+            margin-bottom: 0;
+        }
+        .level-bar {
+            width: 70%;
+            float: left;
+            top: 1px;
+        }
+    }
+}

@@ -1,4 +1,11 @@
-.language span.level {
-    color: rgba(255, 255, 255, 0.6);
-    padding-left: 5px
+.container-block.languages {
+    
+    .block-item {
+        margin-bottom: 10px;
+
+        .language span.level {
+            color: rgba(255, 255, 255, 0.6);
+            padding-left: 5px 
+        }
+    }
 }

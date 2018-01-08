@@ -1,8 +1,9 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
+import './style.css'
 
 const Interests = ({ children }) => (
-    <ContainerBlock type='interests-container' title='Interests'>
+    <ContainerBlock type='interests' title='Interests'>
         {children}
     </ContainerBlock>
 )

@@ -1,5 +1,7 @@
 import React from 'react'
 import Icon from 'react-fontawesome'
+import './style.css'
+
 const projectPeriod = (startTime, endTime) => !startTime
     ? null
     : !endTime 

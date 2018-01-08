@@ -1,0 +1,45 @@
+.item {
+    margin-bottom: 15px;
+
+    .upper-row {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .job-title {
+        color: #3F4650;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+    
+    .time {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #97AAC3;
+
+        @media (max-width: 767px) {
+            position: static;
+            display: block;
+            margin-top: 5px;
+        }
+    }
+    
+    .company {
+        margin-bottom: 10px;
+        color: #97AAC3;
+
+        a {
+            color: #97AAC3;
+        }
+    }
+}
+
+

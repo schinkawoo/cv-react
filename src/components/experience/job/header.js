@@ -9,7 +9,7 @@ export default ({ company, companyUrl, title, startTime, endTime='Present' }) =>
 : (
     <div className="meta">
         <div className="upper-row">
-            <h3 className="job-title">{title}}</h3>
+            <h3 className="job-title">{title}</h3>
             <div className="time">{startTime} - {endTime}</div>
         </div>
         {companyComponent(company, companyUrl)}
