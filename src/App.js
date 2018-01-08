@@ -10,6 +10,13 @@ import Education from './components/education'
 import Languages from './components/languages'
 import Interests from './components/interests'
 import References from './components/references'
+import Summary from './components/summary'
+import {    
+    Experience,
+    Job,
+    Project,
+    Task
+} from './components/experience'
 
 class App extends Component {
   render() {
@@ -56,72 +63,40 @@ class App extends Component {
             </References>
 
         </Container>
-        
+
         <Container type="main">
-            
-            <section className="section summary-section">
-                <h2 className="section-title"><i className="fa fa-user"></i>Career Profile</h2>
-                <div className="summary">
-                    <p>
-                        Dynamic Software Engineer skilled at developing solutions for complex problems,
-                        possessing strong analytical thinking skills and high energy.
-                    </p>
-                </div>
-            </section>
-            
-            <section className="section experiences-section">
-                <h2 className="section-title"><i className="fa fa-briefcase"></i>Experiences</h2>
-                
-                <div className="item">
-                    <div className="meta">
-                        <div className="upper-row">
-                            <h3 className="job-title">Senior Software Developer</h3>
-                            <div className="time">10/2016 - Present</div>
-                        </div>
-                        <div className="company"><a href="http://www.ringier.com/en/about-ringier-1">Ringier AG, Switzerland</a></div>
-                    </div>
-                    <div className="details">
-                        <div className="project">
-                            <span className="project-title">Re-branding of Blick.ch</span>
-                            <span className="time">(09/2017 - Present)</span>
-                            <div className="details">
-                            <Icon name="check-square-o"/>
+            <Summary>
+                Dynamic Software Engineer skilled at developing solutions for complex problems,
+                possessing strong analytical thinking skills and high energy.
+            </Summary>
+            <Experience>         
+                <Job 
+                    company='Ringier AG, Switzerland' 
+                    companyUrl='http://www.ringier.com/en/about-ringier-1' 
+                    title='Senior Software Developer' 
+                    startTime='10/2016'
+                    >
+                        <Project title='Re-branding of Blick.ch' startTime='09/2017' endTime='Present'>
+                            <Task>
                                 Domain architect and technical support for frontend and backend parts of the project
-                            </div>
-                        </div>
-                        <div className="project">
-                            <span className="project-title">Re-branding of Blick.ch: Backend</span>
-                            <span className="time">(06.2017 - 08.2017)</span>
-                            <div className="details"><Icon name="check-square-o"/>
-                            Core developer and technical lead for a View Control Transformer Framework (NodeJS) controlled by Graphiql - GraphQL editor
-                            </div>
-                        </div>
-                        <div className="project">
-                            <span className="project-title">Re-branding of Blick.ch: Frontend</span>
-                            <span className="time">(01.2017 - 05.2017)</span>
-                            <div className="details"><Icon name="check-square-o"/>
-                                Core developer for responsive website (React)
-                            </div>
-                            <div className="details"><Icon name="check-square-o"/>
-                                Core developer for hybrid iOS-Android applications (React-Native)
-                            </div>
-                        </div>
-                        <div className="project">
-                            <span className="project-title">Pulse-Live & Duwun mobile website</span>
-                            <span className="time">(07.2016 - 12.2016)</span>
-                            <div className="details"><Icon name="check-square-o"/>
-                                Extended Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)
-                            </div>
-                            <div className="details"><Icon name="check-square-o"/>
-                                Created highly scalable low latency production setup (AWS & CDN)
-                            </div>
-                            <div className="details"><Icon name="check-square-o"/>
-                                Coached and mentored team members (Javascript & React)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+                            </Task>
+                        </Project>
+                        <Project title='Re-branding of Blick.ch: Backend' startTime='06.2017' endTime='08.2017'>
+                            <Task>
+                                Core developer and technical lead for a View Control Transformer 
+                                Framework (NodeJS) controlled by Graphiql - GraphQL editor
+                            </Task>
+                        </Project>
+                        <Project title='Re-branding of Blick.ch: Frontend' startTime='01.2017' endTime='05.2017'>
+                            <Task>Core developer for responsive website (React)</Task>
+                            <Task>Core developer for hybrid iOS-Android applications (React-Native)</Task>
+                        </Project>
+                        <Project title='Pulse-Live & Duwun mobile website' startTime='07.2016' endTime='12.2016'>
+                            <Task>Extended Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)</Task>
+                            <Task>Created highly scalable low latency production setup (AWS & CDN)</Task>
+                            <Task>Coached and mentored team members (Javascript & React)</Task>
+                        </Project>
+                </Job>
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
@@ -180,7 +155,7 @@ class App extends Component {
                         <div className="company">SapientNitro, Switzerland</div>
                     </div>
                 </div>
-            </section>
+            </Experience>
 
             <section className="skills-section section">
                 <h2 className="section-title"><i className="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
