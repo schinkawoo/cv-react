@@ -1,8 +1,10 @@
+@import 'style/config.scss';
+
 .profile {
   padding: 30px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #fff;
+  color: $white;
 
   .photo {
     margin-bottom: 15px;

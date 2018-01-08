@@ -1,4 +1,5 @@
 @import 'style/breakpoints.scss';
+@import 'style/config.scss';
 
 .item {
     margin-bottom: 15px;
@@ -14,7 +15,7 @@
     }
     
     .job-title {
-        color: #3F4650;
+        color: $color-shade-4;
         font-size: 16px;
         margin-top: 0;
         margin-bottom: 0;
@@ -25,7 +26,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        color: #97AAC3;
+        color: $color-shade-2;
 
         @media (max-width: $large) {
             position: static;
@@ -36,10 +37,10 @@
     
     .company {
         margin-bottom: 10px;
-        color: #97AAC3;
+        color: $color-shade-2;
 
         a {
-            color: #97AAC3;
+            color: $color-shade-2;
         }
     }
 }

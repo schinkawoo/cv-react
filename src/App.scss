@@ -1,12 +1,12 @@
 @import './plugins/font-awesome/scss/font-awesome.css';
 @import './plugins/bootstrap/scss/bootstrap.css';
-@import 'style/variables.scss';
+@import 'style/config.scss';
 /* styles.css */
 /* ======= Base ======= */
 body {
   font-family: 'Roboto', sans-serif;
-  color: #545E6C;
-  background: #f5f5f5;
+  color: $color-shade-3;
+  background: $color-shade-1;
   font-size: 14px;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
@@ -21,12 +21,12 @@ h6 {
   font-weight: 700;
 }
 a {
-  color: $color-secondary;
+  color: $color-theme-3;
   transition: all 0.4s ease-in-out;
 }
 a:hover {
   text-decoration: underline;
-  color: #1a454f;
+  color: $color-theme-4;
 }
 a:focus {
   text-decoration: none;
@@ -40,6 +40,6 @@ p {
 }
 .footer .copyright {
   line-height: 1.6;
-  color: #545E6C;
+  color: $color-shade-3;
   font-size: 13px;
 }

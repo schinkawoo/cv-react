@@ -1,4 +1,4 @@
-@import 'style/variables.scss';
+@import 'style/config.scss';
 
 .item .project {
     .project-title {
@@ -6,7 +6,7 @@
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 5px;
-        color: $color-primary;
+        color: $color-theme-2;
       }
       .time {
         position: relative;

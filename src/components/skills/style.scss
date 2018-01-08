@@ -1,4 +1,5 @@
 @import 'style/breakpoints.scss';
+@import 'style/config.scss';
 
 .skillset {
     .item {
@@ -14,12 +15,12 @@
     
     .level-bar {
         height: 12px;
-        background: #f5f5f5;
+        background: $color-shade-1;
     }
     
     .level-bar-inner {
         height: 12px;
-        background: #7bc2d3;
+        background: $color-theme-1;
     }
 
     .level-bar-fields {
@@ -32,7 +33,7 @@
         .level-bar-field {
             flex: 1;
             height: 12px;
-            border-right: 1px solid#f5f5f5;
+            border-right: 1px solid$color-shade-1;
         }
 
         .level-bar-field:last-child {
