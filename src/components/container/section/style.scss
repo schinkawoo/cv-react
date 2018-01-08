@@ -1,3 +1,5 @@
+@import 'style/variables.scss';
+
 .section {
     margin-bottom: 40px;
   
@@ -5,7 +7,7 @@
       text-transform: uppercase;
       font-size: 20px;
       font-weight: 500;
-      color: #2d7788;
+      color: $color-secondary;
       position: relative;
       margin-top: 0;
       margin-bottom: 20px;
@@ -24,7 +26,7 @@
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        background: #2d7788;
+        background: $color-secondary;
         text-align: center;
         padding-top: 8px;
         font-size: 16px;

@@ -1,3 +1,5 @@
+@import 'style/breakpoints.scss';
+
 .item {
     margin-bottom: 15px;
 
@@ -6,7 +8,7 @@
         overflow: hidden;
         margin-bottom: 2px;
 
-        @media (max-width: 767px) {
+        @media (max-width: $large) {
             margin-bottom: 0;
         }
     }
@@ -25,7 +27,7 @@
         top: 0;
         color: #97AAC3;
 
-        @media (max-width: 767px) {
+        @media (max-width: $large) {
             position: static;
             display: block;
             margin-top: 5px;

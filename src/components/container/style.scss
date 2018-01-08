@@ -1,5 +1,8 @@
+@import 'style/breakpoints.scss';
+@import 'style/variables.scss';
+
 .wrapper {
-    background: #42A8C0;
+    background: $color-primary;
     max-width: 960px;
     margin: 0 auto;
     position: relative;
@@ -8,7 +11,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .sidebar-wrapper {
-    background: #42A8C0;
+    background: $color-primary;
     position: absolute;
     left: 0;
     width: 240px;
@@ -16,7 +19,7 @@
     min-height: 800px;
     color: #fff;
 
-    @media (max-width: 767px) {
+    @media (max-width: $large) {
         position: static;
         width: inherit;
     }
@@ -31,7 +34,7 @@
     padding: 60px;
     padding-left: 300px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $large) {
         padding: 30px;
     }
 }
