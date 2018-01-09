@@ -1,0 +1,36 @@
+@import 'style/config.scss';
+@import 'style/breakpoints.scss';
+
+.screenshot {
+    cursor: pointer;
+    position: absolute;
+    top: 0.6%;
+    right: 1%;
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px solid $color-shade-2;
+    color: $color-shade-2;
+    .fa {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    @media (max-width: $large) {
+        border: 1px solid $color-shade-2;
+        box-shadow: 1px 1px $white;
+        color: $white;
+        font-size: 20px;
+        top: 0.3%;
+    }
+}
+
+.screenshot:hover {
+    background-color: $color-theme-3;
+    color: $white;
+    font-weight: 900;
+}
+
+.hidden {
+    display: none;
+}

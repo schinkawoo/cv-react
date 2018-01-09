@@ -21,6 +21,11 @@
     .level-bar-inner {
         height: 12px;
         background: $color-theme-1;
+        width: 0;
+    }
+
+    .animate {
+        transition: width 1s ease-in-out;
     }
 
     .level-bar-fields {
