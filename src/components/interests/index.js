@@ -3,7 +3,7 @@ import ContainerBlock from '../container/block'
 import './style.css'
 
 const Interests = ({ children }) => (
-    <ContainerBlock type='interests' title='Interests'>
+    <ContainerBlock icon='bicycle' type='interests' title='Interests'>
         {children}
     </ContainerBlock>
 )

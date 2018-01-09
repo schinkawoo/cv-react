@@ -1,14 +1,23 @@
 .container-block {
-  padding-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
 
   .title {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 15px;
+    display: flex;
+
+    .title-text {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .fa {
+      margin-right: 5px;
+    }
   }
 
   .block-item {

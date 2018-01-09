@@ -3,7 +3,7 @@ import ContainerBlock from '../container/block'
 import './style.css'
 
 const Languages = ({ children}) => (
-    <ContainerBlock title='Languages' type='languages'>
+    <ContainerBlock icon='globe' title='Languages' type='languages'>
         {children}
     </ContainerBlock>
 )

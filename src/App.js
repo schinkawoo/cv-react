@@ -11,7 +11,7 @@ import Interests from './components/interests'
 import References from './components/references'
 import Summary from './components/summary'
 import Skills from './components/skills'
-import ScreenshotButton from './components/screenshot-button'
+import Screenshot from './components/screenshot'
 import {    
     Experience,
     Job,
@@ -61,7 +61,8 @@ class App extends Component {
                         </Interests>
 
                         <References>
-                            <References.Reference name='Dan Harabagiu' title='Head of Development at Ringier AG' />
+                            <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
+                            <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
                         </References>
 
                     </Container>
@@ -71,6 +72,15 @@ class App extends Component {
                             Dynamic Software Engineer skilled at developing solutions for complex problems,
                             possessing strong analytical thinking skills and high energy.
                         </Summary>
+
+                        <Skills>
+                            <Skills.Skill title='Javascript' level='95%' />
+                            <Skills.Skill title='React' level='95%' />
+                            <Skills.Skill title='React Native' level='85%' />
+                            <Skills.Skill title='Java' level='60%' />
+                            <Skills.Skill title='Python' level='60%' />
+                        </Skills>  
+
                         <Experience>         
                             <Job
                                 company='Ringier AG, Switzerland' 
@@ -128,17 +138,9 @@ class App extends Component {
                                 title='Internship in Quality Assurance' 
                                 startTime='07/2012'
                                 endTime='12/2012'/>
-                        </Experience>
-
-                        <Skills>
-                            <Skills.Skill title='Javascript' level='95%' />
-                            <Skills.Skill title='React' level='95%' />
-                            <Skills.Skill title='React Native' level='85%' />
-                            <Skills.Skill title='Java' level='60%' />
-                            <Skills.Skill title='Python' level='60%' />
-                        </Skills>            
+                        </Experience>          
                     </Container>
-                    <ScreenshotButton label='SAVE CV' fileName='Vukasin_Nesovic' />
+                    <Screenshot label='SAVE CV' fileName='Vukasin_Nesovic' />
                 </Container>
             </div>
         );

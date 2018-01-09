@@ -3,7 +3,7 @@ import ContainerBlock from '../container/block'
 import './style.css'
 
 const Education = ({ children }) => (
-    <ContainerBlock type='education-container' title='Education'>
+    <ContainerBlock icon='graduation-cap' type='education-container' title='Education'>
         {children}
     </ContainerBlock>
 )
