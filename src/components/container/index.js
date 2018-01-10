@@ -5,8 +5,8 @@ import './style.css';
 export default class extends Component {
     render () {
         const classes = classNames({
-            'wrapper': !this.props.type,
-            [`${this.props.type}-wrapper`]: !!this.props.type
+            'main-container': !this.props.type,
+            [`${this.props.type}-container`]: !!this.props.type
         })
 
         return (

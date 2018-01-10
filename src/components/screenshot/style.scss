@@ -16,7 +16,7 @@
         margin-right: 5px;
     }
 
-    @media (max-width: $large) {
+    @media (max-width: $small) {
         border: 1px solid $color-shade-2;
         box-shadow: 1px 1px $white;
         color: $white;

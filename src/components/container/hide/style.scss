@@ -1,0 +1,27 @@
+@import 'style/breakpoints.scss';
+
+.xsmall {
+    @media (max-width: $small) {
+        display: none
+    }
+}
+.small {
+    @media (min-width: $small + 1) and (max-width: $medium) {
+        display: none
+    }
+}
+.medium {
+    @media (min-width: $medium + 1) and (max-width: $large) {
+        display: none
+    }
+}
+.large {
+    @media (min-width: $large + 1) and (max-width: $xlarge) {
+        display: none
+    }
+}
+.xlarge {
+    @media (min-width: $xlarge + 1) {
+        display: none
+    }
+}

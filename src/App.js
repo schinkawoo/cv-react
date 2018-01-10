@@ -3,6 +3,7 @@ import photo from './images/photo.jpeg';
 import './App.css';
 
 import Container from './components/container'
+import Hide from './components/container/hide'
 import Profile from './components/profile'
 import Contact from './components/contact'
 import Education from './components/education'
@@ -12,7 +13,7 @@ import References from './components/references'
 import Summary from './components/summary'
 import Skills from './components/skills'
 import Screenshot from './components/screenshot'
-import {    
+import { 
     Experience,
     Job,
     Project,
@@ -21,11 +22,49 @@ import {
 
 class App extends Component {
     render() {
+        const sidebarBottomAndFooterContent = (
+            <div>
+                <Education>
+                    <Education.Item
+                        degree='MSc in Computer Science'
+                        university='University of Basel, Switzerland'
+                        graduationTime='2014'
+                    />
+                    <Education.Item 
+                        degree='BSc in Computer Science'
+                        university='University of Belgrade, Serbia'
+                        graduationTime='2010'
+                    />
+                </Education>
+                
+                <Languages>
+                    <Languages.Language name='Serbian' level='Native' />
+                    <Languages.Language name='English' level='Fluent' />
+                    <Languages.Language name='German' level='Fluent' />
+                </Languages>
+    
+                <Interests>
+                    <Interests.Subject text='Billiard' />
+                    <Interests.Subject text='Snowboarding' />
+                    <Interests.Subject text='Cooking' />
+                    <Interests.Subject text='Craft Beer' />
+                </Interests>
+    
+                <References>
+                    <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
+                    <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
+                </References>
+            </div>
+        )
+
         return (
             <div>
                 <Container id='capture'>
-                    <Container type="sidebar">
-                        <Profile photo={photo} name="Vukašin Nešović" title="Full Stack Developer"/>
+                    <Container type="side">
+                        <Profile photo={photo} name="Vukašin Nešović" title="Full Stack Developer">
+                            Dynamic Software Engineer skilled at developing solutions for complex problems,
+                            possessing strong analytical thinking skills and high energy.
+                        </Profile>
                         
                         <Contact>
                             <Contact.Visa text='C' />
@@ -33,46 +72,13 @@ class App extends Component {
                             <Contact.Address text='Döltschiweg 3, Zürich' />
                             <Contact.Email text='vukasin.nesovic@gmail.com' />
                         </Contact>
-                        
-                        <Education>
-                            <Education.Item
-                                degree='MSc in Computer Science'
-                                university='University of Basel, Switzerland'
-                                graduationTime='2014'
-                            />
-                            <Education.Item 
-                                degree='BSc in Computer Science'
-                                university='University of Belgrade, Serbia'
-                                graduationTime='2010'
-                            />
-                        </Education>
-                        
-                        <Languages>
-                            <Languages.Language name='Serbian' level='Native' />
-                            <Languages.Language name='English' level='Fluent' />
-                            <Languages.Language name='German' level='Fluent' />
-                        </Languages>
 
-                        <Interests>
-                            <Interests.Subject text='Billiard' />
-                            <Interests.Subject text='Snowboarding' />
-                            <Interests.Subject text='Cooking' />
-                            <Interests.Subject text='Craft Beer' />
-                        </Interests>
-
-                        <References>
-                            <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
-                            <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
-                        </References>
-
+                        <Hide xsmall>
+                            {sidebarBottomAndFooterContent}
+                        </Hide>
                     </Container>
 
-                    <Container type="main">
-                        <Summary>
-                            Dynamic Software Engineer skilled at developing solutions for complex problems,
-                            possessing strong analytical thinking skills and high energy.
-                        </Summary>
-
+                    <Container type="content">
                         <Skills>
                             <Skills.Skill title='Javascript' level='95%' />
                             <Skills.Skill title='React' level='95%' />
@@ -141,6 +147,11 @@ class App extends Component {
                         </Experience>          
                     </Container>
                     <Screenshot label='SAVE CV' fileName='Vukasin_Nesovic' />
+                    <Hide small medium large xlarge>
+                        <Container type='footer'>
+                            {sidebarBottomAndFooterContent}
+                        </Container>
+                    </Hide>
                 </Container>
             </div>
         );
