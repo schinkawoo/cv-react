@@ -10,7 +10,7 @@ const References = ({ children }) => (
 
 References.Reference = ({ company, name, title}) => (
     <div>
-        <div className='name'>{name}</div>
+        <h4 className='name'>{name}</h4>
         <div className='role'>{title}</div>
         <div className='company'>{company}</div>
     </div>

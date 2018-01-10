@@ -2,9 +2,8 @@
 
 .profile {
   padding: 30px 30px 30px 30px;
-  background: rgba(0, 0, 0, 0.2);
+  background: $color-theme-3;
   text-align: center;
-  color: $white;
 
   .photo {
     margin-bottom: 15px;
@@ -20,16 +19,17 @@
   }
 
   .title {
-    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    color: $color-shade-1;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 15px;
   }
 
   .summary {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;

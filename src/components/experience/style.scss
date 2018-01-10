@@ -1,3 +1,8 @@
-.experience-section .item {
-    margin-bottom: 30px;
-}
+.experience-section {
+    .item {
+        margin-bottom: 30px;
+    }
+    .item:last-child {
+        margin-bottom: 0;
+    }
+} 
