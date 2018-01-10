@@ -1,6 +1,5 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
-import Icon from 'react-fontawesome'
 import './style.css'
 
 const References = ({ children }) => (

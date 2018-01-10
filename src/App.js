@@ -10,7 +10,6 @@ import Education from './components/education'
 import Languages from './components/languages'
 import Interests from './components/interests'
 import References from './components/references'
-import Summary from './components/summary'
 import Skills from './components/skills'
 import Screenshot from './components/screenshot'
 import { 
