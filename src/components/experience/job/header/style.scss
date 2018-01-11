@@ -1,0 +1,47 @@
+@import 'style/breakpoints.scss';
+@import 'style/config.scss';
+
+.job-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    .title {
+        width: 50%;
+        font-size: 18px;
+        color: $color-theme-2;
+        margin-bottom: 0;
+    }
+
+    .period {
+        font-size: 14px;
+        color: $color-shade-2;
+        text-align: right;
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .company {
+        font-weight: 700;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: $small) {
+        .title {
+            order: 1;
+            width: 100%;
+        }
+    
+        .period {
+            order: 0;
+            width: 100%;
+            text-align: left;
+        }
+    
+        .company {
+            order: 2;
+        }
+    }
+}

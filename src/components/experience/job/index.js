@@ -5,7 +5,7 @@ import { Project, Task } from './project'
 import './style.css'
 
 const Job = ({ children, company, title, startTime, endTime}) => (
-    <div className='item'>
+    <div className='job'>
         <Header company={company} title={title} startTime={startTime} endTime={endTime} />
         {children}
     </div>

@@ -1,23 +1,21 @@
 @import 'style/config.scss';
+@import 'style/breakpoints.scss';
 
-.item .project {
-    .project-title {
-        font-size: 14px;
-        font-weight: 500;
-        margin-top: 0;
-        margin-bottom: 5px;
-        color: $color-theme-2;
-      }
-      .time {
-        position: relative;
-        font-size: 13px;
-        padding-left: 3px
-      }
-      .details {
-        padding-left: 10px;
-      }
-      .details span.fa.fa-check-square-o {
-        font-size: 10px;
-        margin-right: 3px
-      }
+.project {
+  margin-bottom: 10px;
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    color: $color-shade-2;
+  }
+  .details {
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+  .details span.fa.fa-check-square-o {
+    font-size: 10px;
+    margin-right: 3px
+  }
 }
