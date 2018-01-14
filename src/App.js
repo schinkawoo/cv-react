@@ -66,8 +66,9 @@ class App extends Component {
                 <Container id='capture'>
                     <Container type="side">
                         <Profile photo={photo} name="Vukašin Nešović" title="Full Stack Developer">
-                            Dynamic Software Engineer skilled at developing solutions for complex problems,
-                            possessing strong analytical thinking skills and high energy.
+                            I am a Senior Software Engineer with speciffic skills in 
+                            development and system architecture for publishing web applications.
+
                         </Profile>
                         
                         <Contact>
@@ -87,7 +88,7 @@ class App extends Component {
                             <Skills.Skill title='Javascript' level='95%' />
                             <Skills.Skill title='React' level='95%' />
                             <Skills.Skill title='React Native' level='85%' />
-                            <Skills.Skill title='Node.js' level='85%' />
+                            <Skills.Skill title='Node.js' level='90%' />
                             <Skills.Skill title='Java' level='60%' />
                             <Skills.Skill title='Python' level='60%' />
                         </Skills>  
