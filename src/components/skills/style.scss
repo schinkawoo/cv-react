@@ -4,24 +4,29 @@
 .skillset {
     .item {
         margin-bottom: 15px;
-        overflow: hidden;
     }
-    
+
     .level-title {
         font-size: 14px;
         margin-top: 0;
-        margin-bottom: 12px;
+        margin-bottom: 5px;
     }
     
     .level-bar {
-        height: 12px;
-        background: $color-shade-1;
+        position: relative;
     }
     
     .level-bar-inner {
-        height: 12px;
-        background: $color-theme-1;
+        border-bottom: 12px solid $color-theme-1;
+        position: absolute;
         width: 0;
+    }
+    .level-bar-inner-background {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 12px solid $color-shade-1;
     }
 
     .animate {
@@ -30,12 +35,11 @@
 
     .level-bar-fields {
         width: 100%;
-        z-index: 10;
-        height: 12px;
-        margin-top: -12px;
+        background: transparent;
         display: flex;
 
         .level-bar-field {
+            z-index: 10;
             flex: 1;
             height: 12px;
             border-right: 1px solid$color-shade-1;
@@ -43,21 +47,28 @@
 
         .level-bar-field:last-child {
             flex: 1;
-            height: 12px;
             border-right: none;
         }
     }
     
     @media (min-width: $large) {
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10pxp
+        }
+
         .level-title {
-            float: left;
-            width: 30%;
             margin-bottom: 0;
         }
+
         .level-bar {
             width: 70%;
-            float: left;
-            top: 1px;
+            
+            .level-bar-fields {
+                position: absolute;
+                margin-top: 0;
+            }
         }
     }
 }

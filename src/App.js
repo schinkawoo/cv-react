@@ -151,7 +151,7 @@ class App extends Component {
                         </Experience>          
                     </Container>
                     <Screenshot label='SAVE CV' fileName='Vukasin_Nesovic' />
-                    <Hide small medium large xlarge>
+                    <Hide small medium large print xlarge>
                         <Container type='footer'>
                             {sidebarBottomAndFooterContent}
                         </Container>

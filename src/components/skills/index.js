@@ -43,6 +43,7 @@ Skills.Skill = class extends Component {
             <div className='item'>
                 <h3 className="level-title">{title}</h3>
                 <div className="level-bar">
+                    <div className='level-bar-inner-background'/>
                     <div className={classes} style={inlineStyle}/>
                     <div className="level-bar-fields">
                         {Array.from(Array(10).keys()).map((key, index) => <div key={index} className='level-bar-field'/>)}

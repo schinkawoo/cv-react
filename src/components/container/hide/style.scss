@@ -4,19 +4,37 @@
     @media (max-width: $small) {
         display: none
     }
+    @media print {
+        display: block;
+    }
 }
 .small {
     @media (min-width: $small + 1) and (max-width: $medium) {
         display: none
+    }
+    @media print {
+        display: block;
     }
 }
 .medium {
     @media (min-width: $medium + 1) and (max-width: $large) {
         display: none
     }
+    @media print {
+        display: block;
+    }
 }
 .large {
     @media (min-width: $large + 1) and (max-width: $xlarge) {
+        display: none
+    }
+    @media print {
+        display: block;
+    }
+}
+
+.print {
+    @media print {
         display: none
     }
 }
