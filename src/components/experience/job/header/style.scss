@@ -11,6 +11,10 @@
         font-size: 18px;
         color: $color-theme-2;
         margin-bottom: 0;
+
+        @media print {
+            color: $color-shade-4;
+        }
     }
 
     .period {

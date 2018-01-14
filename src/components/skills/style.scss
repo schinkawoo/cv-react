@@ -20,6 +20,10 @@
         border-bottom: 12px solid $color-theme-1;
         position: absolute;
         width: 0;
+
+        @media print {
+            border-bottom: 12px solid $color-shade-3;
+        }
     }
     .level-bar-inner-background {
         position: absolute;

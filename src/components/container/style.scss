@@ -23,6 +23,14 @@
     a {
         color: $white;
     }
+
+    @media print {
+        color: $color-shade-4;
+
+        a {
+            color: $color-shade-4;
+        }
+    }
 }
 
 .content-container {

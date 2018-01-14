@@ -34,6 +34,16 @@
         top: -2px;
       }
     }
+
+    @media print {
+      .section-title, {
+        color: $color-shade-4;
+
+        .fa {
+          color: $color-shade-4;
+        }
+      }
+    }
   }
 
   .section:last-child {
