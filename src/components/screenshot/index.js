@@ -14,6 +14,7 @@ export default class SaveButton extends Component {
     }
 
     handleClick = () => {        
+        console.log(`Saving document in ${process.env.NODE_ENV} environment.`)
         if (process.env.NODE_ENV === 'development') {
             if (!this.state.hidden) {
                 this.setState({ hidden: true })
