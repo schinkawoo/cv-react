@@ -87,6 +87,7 @@ class App extends Component {
                             <Skills.Skill title='Javascript' level='95%' />
                             <Skills.Skill title='React' level='95%' />
                             <Skills.Skill title='React Native' level='85%' />
+                            <Skills.Skill title='Node.js' level='85%' />
                             <Skills.Skill title='Java' level='60%' />
                             <Skills.Skill title='Python' level='60%' />
                         </Skills>  

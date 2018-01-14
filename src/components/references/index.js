@@ -3,7 +3,7 @@ import ContainerBlock from '../container/block'
 import './style.css'
 
 const References = ({ children }) => (
-    <ContainerBlock icon='briefcase' title='References' type='references'>
+    <ContainerBlock icon='address-card-o' title='References' type='references'>
         {children}
     </ContainerBlock>
 )

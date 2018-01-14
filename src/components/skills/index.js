@@ -5,7 +5,7 @@ import Section from '../container/section'
 import './style.css'
 
 const Skills = ({ children }) => (
-    <Section icon='rocket' type='skills' title='Skills & Proficiency'>
+    <Section icon='line-chart' type='skills' title='Skills & Proficiency'>
         <div className="skillset">
             {children}
         </div>
