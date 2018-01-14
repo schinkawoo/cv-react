@@ -8,9 +8,14 @@
     max-width: 960px;
     margin: 0 auto;
     position: relative;
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 2px 4px $black;
+    -moz-box-shadow: 0px 2px 4px $black;
+    box-shadow: 0px 2px 4px $black;
+
+    @media(min-width: $large) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .side-container, .footer-container {

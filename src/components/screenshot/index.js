@@ -13,10 +13,15 @@ export default class SaveButton extends Component {
         hidden: false
     }
 
-    handleClick = () => {
-        if (!this.state.hidden) {
-            this.setState({ hidden: true })
+    handleClick = () => {        
+        if (process.env.NODE_ENV === 'development') {
+            if (!this.state.hidden) {
+                this.setState({ hidden: true })
+            }
+        } else {
+            window.open('/vukasin-nesovic.pdf', '_blank')
         }
+        
     }
 
     async componentDidUpdate () {
@@ -24,7 +29,7 @@ export default class SaveButton extends Component {
             FileSaver.saveAs(this.state.screenshot, `${this.props.fileName}.png`)
             this.setState({ screenshot: null, hidden: false })
         } else if (this.state.hidden) {
-            let canvas = await html2canvas(document.body)
+            let canvas = await html2canvas(document.getElementsByClassName('main-container')[0])
             canvas.toBlob(screenshot => this.setState({ screenshot }))
         }
     }

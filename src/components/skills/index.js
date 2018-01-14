@@ -17,7 +17,6 @@ Skills.Skill = class extends Component {
     show = () => this.setState({ visible: true })
     bounce = () => {
         this.setState({ visible: false }, () => setTimeout(this.show, 1))
-        console.log('bounce')
     }
 
     componentDidMount () {
