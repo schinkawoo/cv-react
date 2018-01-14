@@ -20,6 +20,11 @@ import {
 } from './components/experience'
 
 class App extends Component {
+
+    componentDidMount () {
+        document.title = 'Vukasin Nesovic CV in React'
+    }
+
     render() {
         const sidebarBottomAndFooterContent = (
             <div>
