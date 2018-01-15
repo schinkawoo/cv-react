@@ -56,7 +56,7 @@ class App extends Component {
     
                 <References>
                     <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
-                    <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
+                    <References.Reference name='Dr. Benjamin Freuler' title='Head of Project Management Products & Features' company='Ringier AG' />
                 </References>
             </div>
         )
