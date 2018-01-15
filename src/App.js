@@ -49,15 +49,14 @@ class App extends Component {
                 </Languages>
     
                 <Interests>
-                    <Interests.Subject text='Billiard' />
-                    <Interests.Subject text='Snowboarding' />
-                    <Interests.Subject text='Cooking' />
-                    <Interests.Subject text='Craft Beer' />
+                    <Interests.Subject text='Billiard, snowboarding, swimming, cooking, craft beer' />
                 </Interests>
     
                 <References>
                     <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
                     <References.Reference name='Dr. Benjamin Freuler' title='Head of Project Management Products & Features' company='Ringier AG' />
+                    <References.Reference name='Ognen Ivanovski' title='Chief Architect' company='Netcetera' />
+                    <References.Reference name='Andon Sikavica' title='Technical Coordinator' company='Netcetera' />
                 </References>
             </div>
         )
@@ -156,7 +155,7 @@ class App extends Component {
                                 </Summary>
                             </Job>
                             <Job
-                                company='SapientNitro, Switzerland' 
+                                company='SapientNitro, Switzerland'
                                 title='Internship in QA' 
                                 startTime='07/2012'
                                 endTime='12/2012'>
