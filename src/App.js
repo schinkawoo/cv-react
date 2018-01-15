@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import photo from './images/photo.jpeg';
+import photo from './images/photo.jpg';
 import './App.css';
 
 import Container from './components/container'
