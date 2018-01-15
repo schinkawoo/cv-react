@@ -5,9 +5,9 @@ import Summary from './summary'
 import { Project, Task } from './project'
 import './style.css'
 
-const Job = ({ children, company, title, startTime, endTime}) => (
+const Job = ({ children, company, companyUrl, title, startTime, endTime}) => (
     <div className='job'>
-        <Header company={company} title={title} startTime={startTime} endTime={endTime} />
+        <Header company={company} companyUrl={companyUrl} title={title} startTime={startTime} endTime={endTime} />
         {children}
     </div>
 )

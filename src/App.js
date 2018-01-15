@@ -99,6 +99,7 @@ class App extends Component {
                                 companyUrl='http://www.ringier.com/en/about-ringier-1'
                                 title='Senior Software Developer'
                                 startTime='10/2016'
+                                endTime='Present'
                                 >
                                 <Project title='Re-branding of Blick.ch' startTime='09/2017' endTime='Present'>
                                     <Task>
@@ -165,6 +166,13 @@ class App extends Component {
                                 </Summary>
                             </Job>
                         </Experience>          
+                        <Experience>
+                            <Job
+                                company='IEEE International Conference on SmartGridComm'
+                                companyUrl='http://ieeexplore.ieee.org/document/7007687'
+                                title='Evaluation of RPL for MV-PLC'
+                                startTime='2014'/>
+                        </Experience>
                     </Container>
                     <Screenshot label='SAVE CV' fileName='Vukasin_Nesovic' />
                     <Hide small medium large print xlarge>
