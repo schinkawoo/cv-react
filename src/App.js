@@ -166,7 +166,7 @@ class App extends Component {
                                 </Summary>
                             </Job>
                         </Experience>          
-                        <Experience>
+                        <Experience icon='files-o' title='Publications'>
                             <Job
                                 company='IEEE International Conference on SmartGridComm'
                                 companyUrl='http://ieeexplore.ieee.org/document/7007687'
