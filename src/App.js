@@ -66,7 +66,7 @@ class App extends Component {
                 <Container id='capture'>
                     <Container type="side">
                         <Profile photo={photo} name="Vukašin Nešović" title="Full Stack Developer">
-                            I am a Senior Software Engineer with speciffic skills in 
+                            I am a Senior Software Engineer with specific skills in 
                             development and system architecture for publishing web applications.
 
                         </Profile>
