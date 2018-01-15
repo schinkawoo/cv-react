@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../container/section'
-import { Description, Job, Project, Task } from './job'
+import { Description, Job, Project, Task, Summary } from './job'
 import './style.css'
 const Experience = ({ children }) => (
     <Section title='Experiences' type='experience' icon='briefcase'>
@@ -13,5 +13,6 @@ export {
     Experience,
     Job,
     Project,
+    Summary,
     Task
 }

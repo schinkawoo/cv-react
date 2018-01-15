@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Description from './description'
+import Summary from './summary'
 import { Project, Task } from './project'
 import './style.css'
 
@@ -15,6 +16,7 @@ export {
     Description,
     Job,
     Project,
+    Summary,
     Task
 }
 

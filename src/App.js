@@ -16,7 +16,8 @@ import {
     Experience,
     Job,
     Project,
-    Task
+    Task,
+    Summary
 } from './components/experience'
 
 class App extends Component {
@@ -116,7 +117,10 @@ class App extends Component {
                                     <Task>Core developer for hybrid iOS-Android applications (React-Native)</Task>
                                 </Project>
                                 <Project title='Pulse-Live & Duwun mobile website' startTime='07.2016' endTime='12.2016'>
-                                    <Task>Extended Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)</Task>
+                                    <Task>
+                                        Core developer for an extension of Blick Sport App frontend stack, 
+                                        to serve as a mobile website (JavaScript & React)
+                                    </Task>
                                     <Task>Created highly scalable low latency production setup (AWS & CDN)</Task>
                                     <Task>Coached and mentored team members (Javascript & React)</Task>
                                 </Project>
@@ -144,12 +148,23 @@ class App extends Component {
                                 companyUrl='http://new.abb.com/about/technology/corporate-research-centers/corporate-research-center-switzerland' 
                                 title='Internship & Master Thesis' 
                                 startTime='01/2013'
-                                endTime='12/2013'/>
+                                endTime='12/2013'>
+                                <Summary>
+                                    Designed, analyzed and implemented a multipath protocol for the routing solution in power- line communication networks 
+                                    in a networking stack for embedded devices (C - Contiki OS). The protocol is an extension of RPL protocol for routing 
+                                    over Low Power and Lossy net- works.
+                                </Summary>
+                            </Job>
                             <Job
                                 company='SapientNitro, Switzerland' 
-                                title='Internship in Quality Assurance' 
+                                title='Internship in QA' 
                                 startTime='07/2012'
-                                endTime='12/2012'/>
+                                endTime='12/2012'>
+                                <Summary>
+                                    Tested various software solutions and Home Network Devices for Sapient's clients (Swisscom and Audi), 
+                                    including IPTV, iOS, Android applications and web pages.
+                                </Summary>
+                            </Job>
                         </Experience>          
                     </Container>
                     <Screenshot label='SAVE CV' fileName='Vukasin_Nesovic' />
@@ -165,3 +180,4 @@ class App extends Component {
 }
 
 export default App;
+
