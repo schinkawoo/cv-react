@@ -1,0 +1,94 @@
+{
+    "name": {
+        "first": "Vukasin",
+        "last": "Nesovic"
+    },
+    "phones": "+41786948890",
+    "emails": "vukasin.nesovic@gmail.com",
+    "address": {
+        "street": "Doltschiweg",
+        "number": "3",
+        "city": "Zurich",
+        "postalCode": "8055",
+        "country": "Schweiz" 
+    },
+    "visa": "C",
+    "education": [
+        {
+            "level": "MSc in Computer Science",
+            "school": "University of Basel, Switzerland",
+            "startDate": "2011-09-01T00:00:00.000Z",
+            "finishDate": "2014-09-01T00:00:00.000Z"
+        },
+        {
+            "level": "BSc in Computer Science",
+            "school": "University of Belgrade, Serbia",
+            "startDate": "2003-09-01T00:00:00.000Z",
+            "finishDate": "2010-09-01T00:00:00.000Z"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Serbian",
+            "level": "native"
+        },
+        {
+            "language": "English",
+            "level": "fluent"
+        },
+        {
+            "language": "German",
+            "level": "fluent"
+        }
+    ],
+    "interests": [
+        "billiard",
+        "snowboarding",
+        "swimming",
+        "cooking",
+        "craft beer"
+    ],
+    "references": [
+        {
+            "name": "Dan Harabagiu",
+            "role": "Head of Development",
+            "company": "Ringier AG"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Javascript",
+            "level": 95
+        }
+    ],
+    "experiences": [
+        {
+            "role": "",
+            "startDate": "",
+            "endDate": "",
+            "company": {
+                "name": "",
+                "location": ""
+            },
+            "url": "",
+            "summary": "",
+            "projects": [
+                {
+                    "title": "",
+                    "summary": "",
+                    "tasks": [
+                        ""
+                    ]
+                }
+            ]
+        }
+    ],
+    "publications": [
+        {
+            "title": "",
+            "journal": "",
+            "url": "",
+            "date": ""
+        }
+    ]
+}
