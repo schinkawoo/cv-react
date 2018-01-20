@@ -1,10 +1,13 @@
 {
     "name": {
-        "first": "Vukasin",
-        "last": "Nesovic"
+        "first": "Vukašin",
+        "last": "Nešović"
     },
     "phones": "+41786948890",
     "emails": "vukasin.nesovic@gmail.com",
+    "role": "Full Stack Developer",
+    "picture": "./images/photo.jpg",
+    "summary": "I am a Senior Software Engineer with specific skills in development and system architecture for publishing web applications.",
     "address": {
         "street": "Doltschiweg",
         "number": "3",
@@ -53,42 +56,151 @@
             "name": "Dan Harabagiu",
             "role": "Head of Development",
             "company": "Ringier AG"
+        },
+        {
+            "name": "Dr. Benjamin Freuler",
+            "role": "Head of Project Management Products & Features",
+            "company": "Ringier AG"
         }
     ],
     "skills": [
         {
             "name": "Javascript",
             "level": 95
+        },
+        {
+            "name": "React",
+            "level": 95
+        },
+        {
+            "name": "React Native",
+            "level": 85
+        },
+        {
+            "name": "Node.ja",
+            "level": 90
+        },
+        {
+            "name": "Java",
+            "level": 60
+        },
+        {
+            "name": "Python",
+            "level": 60
         }
     ],
     "experiences": [
         {
-            "role": "",
-            "startDate": "",
-            "endDate": "",
+            "role": "Senior Software Developer",
+            "startDate": "2016-10-01T00:00:00.000Z",
+            "endDate": "Present",
             "company": {
-                "name": "",
-                "location": ""
+                "name": "Ringier AG",
+                "location": "Switzerland",
+                "url": "http://www.ringier.com/en/about-ringier-1"
             },
-            "url": "",
             "summary": "",
             "projects": [
                 {
-                    "title": "",
+                    "title": "Re-branding of Blick.ch",
                     "summary": "",
                     "tasks": [
-                        ""
+                        "Domain architect and technical support for frontend and backend parts of the project"
+                    ]
+                },
+                {
+                    "title": "Re-branding of Blick.ch: Backend",
+                    "summary": "",
+                    "tasks": [
+                        "Core developer and technical lead for a View Control Transformer Framework (NodeJS) controlled by Graphiql - GraphQL editor"
+                    ]
+                },
+                {
+                    "title": "Re-branding of Blick.ch: Frontend",
+                    "summary": "",
+                    "tasks": [
+                        "Core developer for responsive website (React)",
+                        "Core developer for hybrid iOS-Android applications (React-Native)"
+                    ]
+                },
+                {
+                    "title": "Pulse-Live & Duwun mobile website",
+                    "summary": "",
+                    "tasks": [
+                        "Core developer for an extension of Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)",
+                        "Created highly scalable low latency production setup (AWS & CDN)",
+                        "Coached and mentored team members (Javascript & React)"
                     ]
                 }
             ]
+        },
+        {
+            "role": "Software Developer",
+            "startDate": "2014-09-01T00:00:00.000Z",
+            "endDate": "2016-09-31T00:00:00.000Z",
+            "company": {
+                "name": "Ringier AG",
+                "location": "Switzerland",
+                "url": "http://www.ringier.com/en/about-ringier-1"
+            },
+            "summary": "",
+            "projects": [
+                {
+                    "title": "Re-branding of Blick Sport App",
+                    "summary": "",
+                    "tasks": [
+                        "Technical specification, planning and implementation of new view-controller modules (Java & JSP)"
+                    ]
+                },
+                {
+                    "title": "Real time sport data adapter",
+                    "summary": "",
+                    "tasks": [
+                        "Performance, code quality and stability optimization (python)",
+                        "Extension with additional data provider"
+                    ]
+                },
+                {
+                    "title": "Blick Sport App",
+                    "summary": "",
+                    "tasks": [
+                        "Design and modeling of widget based view-controller for the React front-end application",
+                        "Development of view-controller layer (Java & JSP)"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Internship & Master Thesis",
+            "startDate": "2013-01-01T00:00:00.000Z",
+            "endDate": "2013-12-31T00:00:00.000Z",
+            "company": {
+                "name": "ABB Corporate Research Centre",
+                "location": "Switzerland",
+                "url": "http://new.abb.com/about/technology/corporate-research-centers/corporate-research-center-switzerland"
+            },
+            "summary": "Designed, analyzed and implemented a multipath protocol for the routing solution in power- line communication networks in a networking stack for embedded devices (C - Contiki OS). The protocol is an extension of RPL protocol for routing over Low Power and Lossy net- works.",
+            "projects": []
+        },
+        {
+            "role": "Internship in QA",
+            "startDate": "2012-07-01T00:00:00.000Z",
+            "endDate": "2012-12-31T00:00:00.000Z",
+            "company": {
+                "name": "SapientNitro",
+                "location": "Switzerland",
+                "url": ""
+            },
+            "summary": "Tested various software solutions and Home Network Devices for Sapient's clients (Swisscom and Audi), including IPTV, iOS, Android applications and web pages.",
+            "projects": []
         }
     ],
     "publications": [
         {
-            "title": "",
-            "journal": "",
-            "url": "",
-            "date": ""
+            "title": "Evaluation of RPL for MV-PLC",
+            "journal": "IEEE International Conference on SmartGridComm",
+            "url": "http://ieeexplore.ieee.org/document/7007687",
+            "date": "2014-03-11T00:00:00.000Z"
         }
     ]
 }
