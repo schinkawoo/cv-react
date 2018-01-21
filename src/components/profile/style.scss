@@ -22,16 +22,16 @@
     display: block;
     color: $color-shade-1;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 15px;
   }
 
   .summary {
-    color: rgba(255, 255, 255, 0.6);
-    color: $color-shade-2;
+    color: $color-shade-1;
     font-size: 16px;
     font-weight: 400;
+    font-style: italic;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center
