@@ -21,13 +21,13 @@
             "level": "MSc in Computer Science",
             "school": "University of Basel, Switzerland",
             "startDate": "2011-09-01",
-            "finishDate": "2014"
+            "finishDate": "2014-09-01T00:00:00.000Z"
         },
         {
             "level": "BSc in Computer Science",
             "school": "University of Belgrade, Serbia",
             "startDate": "2003-09-01T00:00:00.000Z",
-            "finishDate": "2010"
+            "finishDate": "2010-09-01T00:00:00.000Z"
         }
     ],
     "languages": [

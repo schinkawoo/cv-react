@@ -35,10 +35,7 @@ class App extends Component {
             <div>
                 <Education data={this.state.education} />           
                 <Languages data={this.state.languages} />    
-                <Interests>
-                    <Interests.Subject text='Billiard, snowboarding, swimming, cooking, craft beer' />
-                </Interests>
-    
+                <Interests data={this.state.interests} />
                 <References>
                     <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
                     <References.Reference name='Dr. Benjamin Freuler' title='Head of Project Management Products & Features' company='Ringier AG' />
