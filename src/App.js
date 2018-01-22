@@ -36,10 +36,7 @@ class App extends Component {
                 <Education data={this.state.education} />           
                 <Languages data={this.state.languages} />    
                 <Interests data={this.state.interests} />
-                <References>
-                    <References.Reference name='Dan Harabagiu' title='Head of Development' company='Ringier AG' />
-                    <References.Reference name='Dr. Benjamin Freuler' title='Head of Project Management Products & Features' company='Ringier AG' />
-                </References>
+                <References data={this.state.references} />
             </div>
         )
 
