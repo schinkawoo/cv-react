@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import photo from './images/photo.jpg';
 import './App.css';
 
 import Container from './components/container'
@@ -44,10 +43,11 @@ class App extends Component {
             <div>
                 <Container id='capture'>
                     <Container type="side">
-                        <Profile photo={photo} name="Vukašin Nešović" title="Full Stack Developer">
-                            I am a Senior Software Engineer with specific skills in 
-                            development and system architecture for publishing web applications.
-
+                        <Profile
+                            photo={this.state.photo} 
+                            name={this.state.name}
+                            title={this.state.role}>
+                            {this.state.summary}
                         </Profile>
                         
                         <Contact>
