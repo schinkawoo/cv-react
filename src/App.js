@@ -20,7 +20,11 @@ import {
     Summary
 } from './components/experience'
 
+import initState from './state/init.json'
+
 class App extends Component {
+
+    state = initState
 
     componentDidMount () {
         document.title = 'Vukasin Nesovic CV in React'
@@ -29,25 +33,8 @@ class App extends Component {
     render() {
         const sidebarBottomAndFooterContent = (
             <div>
-                <Education>
-                    <Education.Item
-                        degree='MSc in Computer Science'
-                        university='University of Basel, Switzerland'
-                        graduationTime='2014'
-                    />
-                    <Education.Item 
-                        degree='BSc in Computer Science'
-                        university='University of Belgrade, Serbia'
-                        graduationTime='2010'
-                    />
-                </Education>
-                
-                <Languages>
-                    <Languages.Language name='Serbian' level='Native' />
-                    <Languages.Language name='English' level='Fluent' />
-                    <Languages.Language name='German' level='Fluent' />
-                </Languages>
-    
+                <Education data={this.state.education} />           
+                <Languages data={this.state.languages} />    
                 <Interests>
                     <Interests.Subject text='Billiard, snowboarding, swimming, cooking, craft beer' />
                 </Interests>
