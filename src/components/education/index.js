@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import ContainerBlock from '../container/block'
 import './style.css'
 
@@ -12,7 +13,7 @@ const Education = ({ data }) => {
                     key={index}
                     degree={item.level}
                     university={item.school}
-                    graduationTime={item.finishDate}
+                    graduationTime={moment(item.finishDate).format('YYYY')}
                 />
             ))}
         </ContainerBlock>

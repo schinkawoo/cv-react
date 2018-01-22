@@ -9,6 +9,7 @@ const References = ({ data }) => (
                 company={item.company}
                 name={item.name}
                 title={item.role}
+                key={index}
             />
         ))}
     </ContainerBlock>
