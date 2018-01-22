@@ -70,13 +70,14 @@ class App extends Component {
 
                     <Container type="content">
                         <Skills>
-                            <Skills.Skill title='Javascript' level='95%' />
+                            <Skills.Skill title='JavaScript' level='95%' />
+                            <Skills.Skill title='HTML, CSS, Sass' level='85%' />
                             <Skills.Skill title='React' level='95%' />
                             <Skills.Skill title='React Native' level='85%' />
                             <Skills.Skill title='Node.js' level='90%' />
                             <Skills.Skill title='Java' level='60%' />
                             <Skills.Skill title='Python' level='60%' />
-                        </Skills>  
+                        </Skills>
 
                         <Experience>         
                             <Job
@@ -88,7 +89,7 @@ class App extends Component {
                                 >
                                 <Project title='Re-branding of Blick.ch' startTime='09/2017' endTime='Present'>
                                     <Task>
-                                        Domain architect and technical support for frontend and backend parts of the project
+                                        Domain architect and technical support for frontend (React, JavaScript, HTML, CSS) and backend (Node.js) parts of the project
                                     </Task>
                                 </Project>
                                 <Project title='Re-branding of Blick.ch: Backend' startTime='06.2017' endTime='08.2017'>
@@ -98,13 +99,13 @@ class App extends Component {
                                     </Task>
                                 </Project>
                                 <Project title='Re-branding of Blick.ch: Frontend' startTime='01.2017' endTime='05.2017'>
-                                    <Task>Core developer for responsive website (React)</Task>
+                                    <Task>Core developer for responsive website (React, JavaScript, HTML, CSS)</Task>
                                     <Task>Core developer for hybrid iOS-Android applications (React-Native)</Task>
                                 </Project>
                                 <Project title='Pulse-Live & Duwun mobile website' startTime='07.2016' endTime='12.2016'>
                                     <Task>
                                         Core developer for an extension of Blick Sport App frontend stack, 
-                                        to serve as a mobile website (JavaScript & React)
+                                        to serve as a mobile website (React, JavaScript, HTML, CSS)
                                     </Task>
                                     <Task>Created highly scalable low latency production setup (AWS & CDN)</Task>
                                     <Task>Coached and mentored team members (Javascript & React)</Task>
