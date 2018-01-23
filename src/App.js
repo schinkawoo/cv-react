@@ -50,13 +50,12 @@ class App extends Component {
                             {this.state.summary}
                         </Profile>
                         
-                        <Contact>
-                            <Contact.Visa text='C' />
-                            <Contact.Phone text='+41786948890' />
-                            <Contact.Address text='Döltschiweg 3, Zürich' />
-                            <Contact.Email text='vukasin.nesovic@gmail.com' />
-                        </Contact>
-
+                        <Contact 
+                            visa={this.state.visa}
+                            phone={this.state.phone}
+                            address={this.state.address}
+                            email={this.state.email}
+                        />
                         <Hide xsmall>
                             {sidebarBottomAndFooterContent}
                         </Hide>

@@ -3,8 +3,8 @@
         "first": "Vukašin",
         "last": "Nešović"
     },
-    "phones": "+41786948890",
-    "emails": "vukasin.nesovic@gmail.com",
+    "phone": "+41786948890",
+    "email": "vukasin.nesovic@gmail.com",
     "role": "Full Stack Developer",
     "photo": "photo.jpg",
     "summary": "I am a Senior Software Engineer with specific skills in development and system architecture for publishing web applications.",
@@ -12,8 +12,8 @@
         "street": "Doltschiweg",
         "number": "3",
         "city": "Zurich",
-        "postalCode": "8055",
-        "country": "Schweiz" 
+        "postalCode": "",
+        "country": "" 
     },
     "visa": "C",
     "education": [
