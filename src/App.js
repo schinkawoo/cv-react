@@ -28,11 +28,11 @@ class App extends Component {
                 <Container id='capture'>
                     <Container type="side">
                         <Profile
-                            photo={this.state.photo} 
+                            photo={this.state.photo}
                             name={this.state.name}
-                            title={this.state.title}>
-                            {this.state.summary}
-                        </Profile>
+                            title={this.state.title}
+                            summary={this.state.summary}
+                        />
                         
                         <Contact 
                             visa={this.state.visa}

@@ -1,6 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import ContainerBlock from '../container/block'
+import EditButton from '../edit/button'
 import './style.css'
 
 const Education = ({ data }) => {  
@@ -16,6 +17,7 @@ const Education = ({ data }) => {
                     graduationTime={moment(item.finishDate, 'YYYY/MM/DD').format('YYYY')}
                 />
             ))}
+            <EditButton inverted />
         </ContainerBlock>
     )
 }

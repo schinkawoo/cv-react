@@ -1,5 +1,6 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
+import EditButton from '../edit/button'
 import './style.css'
 
 function capitalize (string) {
@@ -15,6 +16,7 @@ function interestItems (type, data) {
 const Interests = ({ data, type = 'compact' }) => (
     <ContainerBlock icon='bicycle' type='interests' title='Interests'>
         {interestItems(type, data)}
+        <EditButton inverted />
     </ContainerBlock>
 )
 

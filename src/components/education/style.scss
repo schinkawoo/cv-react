@@ -1,6 +1,8 @@
 @import 'style/config.scss';
 
 .education-container {
+    position: relative;
+    
     .university {
         color: $color-shade-1;
         margin-bottom: 0px;

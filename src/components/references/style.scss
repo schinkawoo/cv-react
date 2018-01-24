@@ -1,6 +1,8 @@
 @import 'style/config.scss';
 
 .references {
+    position: relative;
+
     .name {
         color: $white;
         font-size: 16px;

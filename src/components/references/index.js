@@ -1,5 +1,6 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
+import EditButton from '../edit/button'
 import './style.css'
 
 const References = ({ data }) => (
@@ -12,6 +13,7 @@ const References = ({ data }) => (
                 key={index}
             />
         ))}
+        <EditButton inverted />
     </ContainerBlock>
 )
 

@@ -1,0 +1,27 @@
+@import 'style/config.scss';
+
+.edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $color-shade-2;
+
+    .fa.fa-cog {
+        font-size: 25px;
+        padding: 5px;
+        margin: 0;
+        opacity: 0.5;
+    }
+
+    .fa:hover {
+        opacity: 1;
+    }
+}
+
+.edit-button.inverted {
+    color: $color-theme-3;
+
+    .fa:hover {
+        opacity: 1;
+    }
+}

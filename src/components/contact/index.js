@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from 'react-fontawesome'
 import ContainerBlock from '../container/block'
+import EditButton from '../edit/button'
 import './style.css'
 
 const Contact = ({ address, email, visa, phone }) => {
@@ -10,6 +11,7 @@ const Contact = ({ address, email, visa, phone }) => {
                 <Phone text={phone} />
                 <Address address={address} />
                 <Email text={email} />
+                <EditButton inverted/>
             </ContainerBlock>
         )
         : null

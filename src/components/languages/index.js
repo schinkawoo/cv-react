@@ -1,5 +1,6 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
+import EditButton from '../edit/button'
 import './style.css'
 
 const Languages = ({ data }) => {
@@ -10,6 +11,7 @@ const Languages = ({ data }) => {
             {data.map((item, index) => (
                 <Language name={item.language} level={item.level} key={index} />
             ))}
+            <EditButton inverted />
         </ContainerBlock>
     )
 }
