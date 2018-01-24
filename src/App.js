@@ -62,16 +62,7 @@ class App extends Component {
                     </Container>
 
                     <Container type="content">
-                        <Skills>
-                            <Skills.Skill title='JavaScript' level='95%' />
-                            <Skills.Skill title='HTML, CSS, Sass' level='85%' />
-                            <Skills.Skill title='React' level='95%' />
-                            <Skills.Skill title='React Native' level='85%' />
-                            <Skills.Skill title='Node.js' level='90%' />
-                            <Skills.Skill title='Java' level='60%' />
-                            <Skills.Skill title='Python' level='60%' />
-                        </Skills>
-
+                        <Skills data={this.state.skills} />
                         <Experience>         
                             <Job
                                 company='Ringier AG, Switzerland' 
