@@ -1,0 +1,14 @@
+.edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .fa {
+        padding: 5px;
+        opacity: 0.5;
+    }
+
+    .fa:hover {
+        opacity: 1;
+    }
+}

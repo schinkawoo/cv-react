@@ -22,7 +22,7 @@ class App extends Component {
         document.title = 'Vukasin Nesovic CV in React'
     }
 
-    render() {        
+    render() {
         return (
             <div>
                 <Container id='capture'>
