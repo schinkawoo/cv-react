@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import inView from 'in-view'
-import classNames from 'classnames'
+import React from 'react'
 import Skill from './skill'
 import Section from '../container/section'
 import './style.css'

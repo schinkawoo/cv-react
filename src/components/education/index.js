@@ -13,7 +13,7 @@ const Education = ({ data }) => {
                     key={index}
                     degree={item.level}
                     university={item.school}
-                    graduationTime={moment(item.finishDate).format('YYYY')}
+                    graduationTime={moment(item.finishDate, 'YYYY/MM/DD').format('YYYY')}
                 />
             ))}
         </ContainerBlock>

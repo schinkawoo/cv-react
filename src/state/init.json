@@ -5,7 +5,7 @@
     },
     "phone": "+41786948890",
     "email": "vukasin.nesovic@gmail.com",
-    "role": "Full Stack Developer",
+    "title": "Full Stack Developer",
     "photo": "photo.jpg",
     "summary": "I am a Senior Software Engineer with specific skills in development and system architecture for publishing web applications.",
     "address": {
@@ -20,14 +20,14 @@
         {
             "level": "MSc in Computer Science",
             "school": "University of Basel, Switzerland",
-            "startDate": "2011-09-01",
-            "finishDate": "2014-09-01T00:00:00.000Z"
+            "startDate": "2011/09/01",
+            "finishDate": "2014/09/01"
         },
         {
             "level": "BSc in Computer Science",
             "school": "University of Belgrade, Serbia",
-            "startDate": "2003-09-01T00:00:00.000Z",
-            "finishDate": "2010-09-01T00:00:00.000Z"
+            "startDate": "2003/09/01",
+            "finishDate": "2010/09/01"
         }
     ],
     "languages": [
@@ -54,12 +54,12 @@
     "references": [
         {
             "name": "Dan Harabagiu",
-            "role": "Head of Development",
+            "title": "Head of Development",
             "company": "Ringier AG"
         },
         {
             "name": "Dr. Benjamin Freuler",
-            "role": "Head of Project Management Products & Features",
+            "title": "Head of Project Management Products & Features",
             "company": "Ringier AG"
         }
     ],
@@ -95,8 +95,8 @@
     ],
     "experiences": [
         {
-            "role": "Senior Software Developer",
-            "startDate": "2016-10-01T00:00:00.000Z",
+            "title": "Senior Software Developer",
+            "startDate": "2016/10/01",
             "endDate": "Present",
             "company": {
                 "name": "Ringier AG",
@@ -139,9 +139,9 @@
             ]
         },
         {
-            "role": "Software Developer",
-            "startDate": "2014-09-01T00:00:00.000Z",
-            "endDate": "2016-09-31T00:00:00.000Z",
+            "title": "Software Developer",
+            "startDate": "2014/09/01",
+            "endDate": "2016/09/30",
             "company": {
                 "name": "Ringier AG",
                 "location": "Switzerland",
@@ -175,9 +175,9 @@
             ]
         },
         {
-            "role": "Internship & Master Thesis",
-            "startDate": "2013-01-01T00:00:00.000Z",
-            "endDate": "2013-12-31T00:00:00.000Z",
+            "title": "Internship & Master Thesis",
+            "startDate": "2013/01/01",
+            "endDate": "2013/12/31",
             "company": {
                 "name": "ABB Corporate Research Centre",
                 "location": "Switzerland",
@@ -187,9 +187,9 @@
             "projects": []
         },
         {
-            "role": "Internship in QA",
-            "startDate": "2012-07-01T00:00:00.000Z",
-            "endDate": "2012-12-31T00:00:00.000Z",
+            "title": "Internship in QA",
+            "startDate": "2012/07/01",
+            "endDate": "2012/12/31",
             "company": {
                 "name": "SapientNitro",
                 "location": "Switzerland",
@@ -202,9 +202,12 @@
     "publications": [
         {
             "title": "Evaluation of RPL for MV-PLC",
-            "journal": "IEEE International Conference on SmartGridComm",
-            "url": "http://ieeexplore.ieee.org/document/7007687",
-            "date": "2014-03-11T00:00:00.000Z"
+            "conference": {
+                "name": "IEEE International Conference on SmartGridComm",
+                "location": "Venice, Italy",
+                "url": "http://ieeexplore.ieee.org/document/7007687"
+            },
+            "startDate": "2014/03/11"
         }
     ]
 }

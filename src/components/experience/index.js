@@ -1,18 +1,12 @@
 import React from 'react'
 import Section from '../container/section'
-import { Description, Job, Project, Task, Summary } from './job'
+import Job from './job'
 import './style.css'
-const Experience = ({ children, icon, title }) => (
-    <Section title={title || 'Experiences'} type='experience' icon={icon || 'briefcase'}>
-        {children}
-    </Section>
-)
 
-export {
-    Description,
-    Experience,
-    Job,
-    Project,
-    Summary,
-    Task
-}
+export default ({ data, icon, title }) => data && data.length > 0
+    ? (
+        <Section title={title || 'Experiences'} type='experience' icon={icon || 'briefcase'}>
+            {data.map((job, index) => <Job {...job} key={index} />)}
+        </Section>
+    )
+    : null

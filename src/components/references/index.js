@@ -8,7 +8,7 @@ const References = ({ data }) => (
             <Reference
                 company={item.company}
                 name={item.name}
-                title={item.role}
+                title={item.title}
                 key={index}
             />
         ))}
@@ -16,13 +16,14 @@ const References = ({ data }) => (
 )
 
 function Reference ({ company, name, title}) {
-    return (
-        <div>
-            <h4 className='name'>{name}</h4>
-            <div className='role'>{title}</div>
-            <div className='company'>{company}</div>
-        </div>
-    )
+    return name && company ? (
+            <div>
+                <h4 className='name'>{name}</h4>
+                {title ? <div className='role'>{title}</div> : null}
+                <div className='company'>{company}</div>
+            </div>
+        )
+        : null
 }
 
 export default References

@@ -1,22 +1,13 @@
 import React from 'react'
 import Header from './header'
-import Description from './description'
 import Summary from './summary'
-import { Project, Task } from './project'
+import Project from './project'
 import './style.css'
 
-const Job = ({ children, company, companyUrl, title, startTime, endTime}) => (
+export default ({ company, title, projects = [], summary, startDate, endDate }) => (
     <div className='job'>
-        <Header company={company} companyUrl={companyUrl} title={title} startTime={startTime} endTime={endTime} />
-        {children}
+        <Header company={company} title={title} startDate={startDate} endDate={endDate} />
+        <Summary content={summary} />
+        {projects.length > 0 ? projects.map((project, index) => <Project {...project} key={index} />) : null}
     </div>
 )
-
-export {
-    Description,
-    Job,
-    Project,
-    Summary,
-    Task
-}
-

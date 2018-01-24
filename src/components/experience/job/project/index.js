@@ -2,23 +2,21 @@ import React from 'react'
 import Icon from 'react-fontawesome'
 import './style.css'
 
-const Project = ({ children, title, startTime='', endTime='' }) => !title || !children
+export default ({ tasks, title, summary='' }) => !title || !tasks || tasks.length === 0
     ? null
     : (
         <div className="project">
             <div className="title">{title}</div>
-            {children}
+            {tasks.map((task, index) => <Task content={task} key={index}/>)}
         </div>
     )
 
-const Task = ({ children }) => (
-    <div className="details">
-        <Icon name="check-square-o"/>
-        {children}
-    </div>
-)
-
-export {
-    Project,
-    Task
+function Task ({ content }) {
+    return content ? (
+            <div className="details">
+                <Icon name="check-square-o"/>
+                {content}
+            </div>
+        )
+        : null
 }

@@ -2,8 +2,9 @@ import React from 'react'
 import './style.css'
 
 
-export default ({ children }) => (
-    <div className='job-summary'>
-        {children}
-    </div>
-)
+export default ({ content }) => content ? (
+        <div className='job-summary'>
+            {content}
+        </div>
+    )
+    : null
