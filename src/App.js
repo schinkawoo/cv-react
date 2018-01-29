@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux'
 
 import Container from './components/container'
 import Hide from './components/container/hide'
@@ -12,7 +13,8 @@ import Skills from './components/skills'
 import Screenshot from './components/screenshot'
 import Experience from './components/experience'
 
-import initState from './state/init.json'
+import initState from './store/init.json'
+import store from './store'
 
 class App extends Component {
 
@@ -24,42 +26,44 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <Container id='capture'>
-                    <Container type="side">
-                        <Profile
-                            photo={this.state.photo}
-                            name={this.state.name}
-                            title={this.state.title}
-                            summary={this.state.summary}
-                        />
-                        
-                        <Contact 
-                            visa={this.state.visa}
-                            phone={this.state.phone}
-                            address={this.state.address}
-                            email={this.state.email}
-                        />
-                        <Hide xsmall>
-                            {sidebarBottomAndFooterContent(this.state)}
+            <Provider store={store}>
+                <div>
+                    <Container id='capture'>
+                        <Container type="side">
+                            <Profile
+                                photo={this.state.photo}
+                                name={this.state.name}
+                                title={this.state.title}
+                                summary={this.state.summary}
+                            />
+                            
+                            <Contact 
+                                visa={this.state.visa}
+                                phone={this.state.phone}
+                                address={this.state.address}
+                                email={this.state.email}
+                            />
+                            <Hide xsmall>
+                                {sidebarBottomAndFooterContent(this.state)}
+                            </Hide>
+                        </Container>
+
+                        <Container type="content">
+                            <Skills data={this.state.skills} />
+                            <Experience data={this.state.experiences} />
+                            <Experience icon='files-o' title='Publications' 
+                                data={mapPublicationsToExperiences(this.state.publications)} 
+                            />
+                        </Container>
+                        <Screenshot label='SAVE' fileName='Vukasin_Nesovic' />
+                        <Hide small medium large print xlarge>
+                            <Container type='footer'>
+                                {sidebarBottomAndFooterContent(this.state)}
+                            </Container>
                         </Hide>
                     </Container>
-
-                    <Container type="content">
-                        <Skills data={this.state.skills} />
-                        <Experience data={this.state.experiences} />
-                        <Experience icon='files-o' title='Publications' 
-                            data={mapPublicationsToExperiences(this.state.publications)} 
-                        />
-                    </Container>
-                    <Screenshot label='SAVE' fileName='Vukasin_Nesovic' />
-                    <Hide small medium large print xlarge>
-                        <Container type='footer'>
-                            {sidebarBottomAndFooterContent(this.state)}
-                        </Container>
-                    </Hide>
-                </Container>
-            </div>
+                </div>
+            </Provider>
         );
     }
 }
