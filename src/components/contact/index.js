@@ -3,15 +3,18 @@ import Icon from 'react-fontawesome'
 import ContainerBlock from '../container/block'
 import EditButton from '../edit/button'
 import './style.css'
+import { connect } from 'react-redux';
+import { edit } from '../../components/edit/actions'
+import { fieldTypes } from '../fields'
 
-const Contact = ({ address, email, visa, phone }) => {
+const Contact = ({ address, email, visa, phone, dispatch }) => {
     return address || email || visa || phone ? (
             <ContainerBlock type='contact'>
                 <Visa text={visa} />
                 <Phone text={phone} />
                 <Address address={address} />
                 <Email text={email} />
-                <EditButton inverted/>
+                <EditButton inverted onClick={() => dispatch(edit(contactFields()))}/>
             </ContainerBlock>
         )
         : null
@@ -50,4 +53,13 @@ function format (string) {
     return string ? `, ${string}` : ''
 }
 
-export default Contact
+function contactFields () {
+    return {
+        address: fieldTypes.ADDRESS,
+        email: fieldTypes.TEXT,
+        phone: fieldTypes.TEXT,
+        visa: fieldTypes.TEXT
+    }
+}
+
+export default connect()(Contact)

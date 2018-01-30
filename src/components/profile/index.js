@@ -5,15 +5,6 @@ import { edit } from '../edit/actions'
 import EditButton from '../edit/button'
 import { fieldTypes } from '../fields'
 
-function profileFields () {
-    return {
-        name: fieldTypes.TEXT,
-        summary: fieldTypes.TEXT,
-        photo: fieldTypes.URL,
-        title: fieldTypes.TEXT
-    }
-}
-
 export default connect()(({ name, summary, photo, title, dispatch }) => (
     <div className="profile">
         { !!photo ? <img className="photo" src={photo} alt="profile" /> : null }
@@ -23,3 +14,12 @@ export default connect()(({ name, summary, photo, title, dispatch }) => (
         <EditButton onClick={() => dispatch(edit(profileFields()))} />
     </div>
 ))
+
+function profileFields () {
+    return {
+        name: fieldTypes.TEXT,
+        summary: fieldTypes.TEXT,
+        photo: fieldTypes.TEXT,
+        title: fieldTypes.TEXT
+    }
+}
