@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
-import profileReducer from '../components/profile/reducer'
+import editReducer from '../components/edit/reducer'
 import initState from './init.json'
 
-const store = createStore(profileReducer, initState, applyMiddleware(logger))
+const store = createStore(editReducer, initState, applyMiddleware(logger))
 
 export default store

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux'
+import { path } from 'ramda'
+import { connect } from 'react-redux'
 
 import Container from './components/container'
 import Hide from './components/container/hide'
@@ -12,63 +13,61 @@ import References from './components/references'
 import Skills from './components/skills'
 import Screenshot from './components/screenshot'
 import Experience from './components/experience'
-
-import initState from './store/init.json'
-import store from './store'
+import EditBox from './components/edit/box'
 
 class App extends Component {
-
-    state = initState
-
-    componentDidMount () {
-        document.title = 'Vukasin Nesovic CV in React'
-    }
-
     render() {
         return (
-            <Provider store={store}>
-                <div>
-                    <Container id='capture'>
-                        <Container type="side">
-                            <Profile
-                                photo={this.state.photo}
-                                name={this.state.name}
-                                title={this.state.title}
-                                summary={this.state.summary}
-                            />
-                            
-                            <Contact 
-                                visa={this.state.visa}
-                                phone={this.state.phone}
-                                address={this.state.address}
-                                email={this.state.email}
-                            />
-                            <Hide xsmall>
-                                {sidebarBottomAndFooterContent(this.state)}
-                            </Hide>
-                        </Container>
-
-                        <Container type="content">
-                            <Skills data={this.state.skills} />
-                            <Experience data={this.state.experiences} />
-                            <Experience icon='files-o' title='Publications' 
-                                data={mapPublicationsToExperiences(this.state.publications)} 
-                            />
-                        </Container>
-                        <Screenshot label='SAVE' fileName='Vukasin_Nesovic' />
-                        <Hide small medium large print xlarge>
-                            <Container type='footer'>
-                                {sidebarBottomAndFooterContent(this.state)}
-                            </Container>
+            <div>
+                <Container id='capture'>
+                    <Container type="side">
+                        <Profile
+                            photo={this.props.photo}
+                            name={this.props.name}
+                            title={this.props.title}
+                            summary={this.props.summary}
+                        />
+                        
+                        <Contact 
+                            visa={this.props.visa}
+                            phone={this.props.phone}
+                            address={this.props.address}
+                            email={this.props.email}
+                        />
+                        <Hide xsmall>
+                            {sidebarBottomAndFooterContent(this.props)}
                         </Hide>
                     </Container>
-                </div>
-            </Provider>
+
+                    <Container type="content">
+                        <Skills data={this.props.skills} />
+                        <Experience data={this.props.experiences} />
+                        <Experience icon='files-o' title='Publications' 
+                            data={mapPublicationsToExperiences(this.props.publications)} 
+                        />
+                    </Container>
+                    <Screenshot label='SAVE' fileName='Vukasin_Nesovic' />
+                    <EditBox
+                        appState={this.props}
+                        path={path(['edit', 'path'], this.props)} 
+                        fields={path(['edit', 'fields'], this.props)} 
+                    />
+                    <Hide small medium large print xlarge>
+                        <Container type='footer'>
+                            {sidebarBottomAndFooterContent(this.props)}
+                        </Container>
+                    </Hide>
+                </Container>
+            </div>
         );
     }
 }
 
-export default App;
+function mapStateToProps (state) {
+    return state
+}
+
+export default connect(mapStateToProps)(App);
 
 function sidebarBottomAndFooterContent ({ education, languages, interests, references}) {
     return (

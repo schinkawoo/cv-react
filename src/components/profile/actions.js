@@ -1,24 +1,14 @@
-const types = {
-    UPDATE_PROFILE: 'UPDATE_PROFILE',
-    EDIT_PROFILE: 'EDIT_PROFILE'
-}
+import { types } from '../action-types'
 
-function updateProfile (data) {
+function updateProfile (fields) {
     return {
         type: types.UPDATE_PROFILE,
-        data
-    }
-}
-
-function editProfile (data) {
-    return {
-        type: types.EDIT_PROFILE,
-        data
+        fields,
+        path: []
     }
 }
 
 export {
-    editProfile,
     updateProfile,
     types
 }

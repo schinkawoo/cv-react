@@ -1,8 +1,5 @@
 {
-    "name": {
-        "first": "Vukašin",
-        "last": "Nešović"
-    },
+    "name": "Vukašin Nešović",
     "phone": "+41786948890",
     "email": "vukasin.nesovic@gmail.com",
     "title": "Full Stack Developer",
