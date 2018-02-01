@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { edit } from '../../components/edit/actions'
 import { keyIn } from '../data'
 
-const Contact = ({ cursor, path = [], dispatch }) => {
+const Contact = ({ cursor, path, dispatch }) => {
     const keys = [ 'visa', 'phone', 'address', 'email' ]
     const { 
         visa, 

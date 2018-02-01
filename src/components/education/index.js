@@ -6,7 +6,7 @@ import './style.css'
 import { connect } from 'react-redux';
 import { edit } from '../edit/actions'
 
-const Education = ({ cursor, path = [], dispatch }) => { 
+const Education = ({ cursor, path, dispatch }) => { 
     if (!cursor || cursor.size <= 0) return null
     const keys = ['education']
 

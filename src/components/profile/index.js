@@ -5,7 +5,7 @@ import { edit } from '../edit/actions'
 import EditButton from '../edit/button'
 import { keyIn } from '../data'
 
-const Profile = ({ cursor, path = [], dispatch }) => {
+const Profile = ({ cursor, path, dispatch }) => {
     const keys = ['photo', 'name', 'title', 'summary']
     const { 
         photo, 

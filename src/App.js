@@ -29,10 +29,11 @@ class App extends Component {
                     </Container>
 
                     <Container type="content">
-                        <Skills data={this.props.cursor.get('skills').toJS()} />
-                        <Experience data={this.props.cursor.get('experiences').toJS()} />
+                        <Skills cursor={this.props.cursor.get('skills')} />
+                        <Experience cursor={this.props.cursor.get('experiences')} field='experiences' />
                         <Experience icon='files-o' title='Publications' 
-                            data={mapPublicationsToExperiences(this.props.cursor.get('publications').toJS())} 
+                            cursor={this.props.cursor.get('publications')}
+                            field='publications'
                         />
                     </Container>
                     <Screenshot label='SAVE' fileName='Vukasin_Nesovic' />
@@ -59,16 +60,16 @@ function sidebarBottomAndFooterContent (cursor) {
     return (
         <div>
             <Education cursor={cursor.get('education')} />           
-            <Languages data={cursor.get('languages').toJS()} />    
-            <Interests data={cursor.get('interests').toJS()} />
-            <References data={cursor.get('references').toJS()} />
+            <Languages cursor={cursor.get('languages')} />    
+            <Interests cursor={cursor.get('interests')} />
+            <References cursor={cursor.get('references')} />
         </div>
     )
 } 
 
-function mapPublicationsToExperiences (publications) {
-    return publications.map(publication => ({
-        ...publication,
-        company: publication.conference
-    }))
-}
+// function mapPublicationsToExperiences (publications) {
+//     return publications.map(publication => ({
+//         ...publication,
+//         company: publication.conference
+//     }))
+// }

@@ -52,6 +52,8 @@ class EditBox extends Component {
         switch (field.constructor.name) {
             case 'String':
                 return this._renderField(name, index, change, fieldsPath)
+            case 'Number':
+                return this._renderField(name, index, change, fieldsPath)
             case 'IndexedIterable': {
                 return (
                     <div className='edit-items' key={index}>
@@ -69,8 +71,7 @@ class EditBox extends Component {
                 )
             }
             default: 
-                console.log('default: ', field.constructor.name)
-                console.log(field.toJS())
+                console.warn('Unsupported field type: ', field.constructor.name)
                 return null
         }  
     }
@@ -85,14 +86,14 @@ class EditBox extends Component {
     
         return (
             <div className='edit-item' key={index}>
-                <div className='edit-item-name'>{name}</div>
+                {name.constructor.name !== 'Number' ? <div className='edit-item-name'>{name}</div> : null}
                 <InlineEdit
                     className='edit-item-value'
                     activeClassName='edit-item-value-active'
                     change={change(fieldsPath)}
-                    paramName={name}
+                    paramName={name.toString()}
                     editing={name === targetField}
-                    text={text}
+                    text={text.toString()}
                 />
             </div>
         )

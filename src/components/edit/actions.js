@@ -1,6 +1,6 @@
 import { types } from '../action-types'
 
-function edit (path, fields, targetField) {
+function edit (path = [], fields = [], targetField) {
     return {
         type: types.EDIT,
         fields,
