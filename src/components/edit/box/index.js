@@ -21,8 +21,8 @@ class EditBox extends Component {
         return (
             <div className='edit-box-wrapper'>
                 <div className='edit-box'>
-                    {fields.toArray().map((paramName, index) => {
-                        return this._field(paramName, index, this._handleFieldChange)
+                    {fields.toArray().map((index) => {
+                        return this._field(index, index, this._handleFieldChange)
                     })}
                     <div className='edit-box-close' onClick={this._handleClose}>
                         <Icon name='times-circle-o' />
@@ -43,20 +43,36 @@ class EditBox extends Component {
         this.props.dispatch(edit())
     }
 
-    _field = (name, index, change) => {
+    _field = (name, index, change, fieldsPath = []) => {
         const { path, cursor } = this.props
         const targetPath = cursor.getIn(path.concat(['path']))
-        const targetCursor = cursor.getIn(targetPath)
+        const targetCursor = cursor.getIn(targetPath.concat(fieldsPath))
         const field = targetCursor.get(name)
 
-        return field.constructor.name === 'KeyedIterable' 
-            ? (
-                <div className='edit-items' key={index}>
-                    {Object.keys(field.toObject()).map((key, index) => 
-                        this._renderField(key, index, change, [name]))}
-                </div>
-            )
-            : this._renderField(name, index, change)     
+        switch (field.constructor.name) {
+            case 'String':
+                return this._renderField(name, index, change, fieldsPath)
+            case 'IndexedIterable': {
+                return (
+                    <div className='edit-items' key={index}>
+                        {field.toArray().map((item, index) => index).map((index) => 
+                            this._field(index, index, change, fieldsPath.concat([name])))}
+                    </div>
+                )
+            }
+            case 'KeyedIterable': {
+                return (
+                    <div className='edit-items' key={index}>
+                        {Object.keys(field.toObject()).map((key, index) => 
+                            this._field(key, index, change, fieldsPath.concat([name])))}
+                    </div>
+                )
+            }
+            default: 
+                console.log('default: ', field.constructor.name)
+                console.log(field.toJS())
+                return null
+        }  
     }
     
     _renderField = (name, index, change, fieldsPath = []) => {
@@ -64,7 +80,6 @@ class EditBox extends Component {
         const targetPath = cursor.getIn(path.concat(['path']))
         const targetCursor = cursor.getIn(targetPath.concat(fieldsPath))
         const targetField = cursor.getIn(path.concat(['targetField']))
-    
         const text = targetCursor.get(name)
         if (!text) return null
     

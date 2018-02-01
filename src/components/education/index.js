@@ -3,21 +3,24 @@ import moment from 'moment'
 import ContainerBlock from '../container/block'
 import EditButton from '../edit/button'
 import './style.css'
+import { connect } from 'react-redux';
+import { edit } from '../edit/actions'
 
-const Education = ({ data }) => {  
-    if (!data || data.length <= 0) return null
-    
+const Education = ({ cursor, path = [], dispatch }) => { 
+    if (!cursor || cursor.size <= 0) return null
+    const keys = ['education']
+
     return (
         <ContainerBlock icon='graduation-cap' type='education-container' title='Education'>
-            {data.map((item, index) => (
+            {cursor.toArray().map((item, index) => (
                 <Item
                     key={index}
-                    degree={item.level}
-                    university={item.school}
-                    graduationTime={moment(item.finishDate, 'YYYY/MM/DD').format('YYYY')}
+                    degree={item.get('level')}
+                    university={item.get('school')}
+                    graduationTime={moment(item.get('finishDate'), 'YYYY/MM/DD').format('YYYY')}
                 />
             ))}
-            <EditButton inverted />
+            <EditButton inverted onClick={() => dispatch(edit(path, keys))} />
         </ContainerBlock>
     )
 }
@@ -32,4 +35,4 @@ function Item ({ degree, university, graduationTime }) {
     )
 }
 
-export default Education
+export default connect()(Education)

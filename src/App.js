@@ -58,7 +58,7 @@ function sidebarBottomAndFooterContent (cursor) {
 
     return (
         <div>
-            <Education data={cursor.get('education').toJS()} />           
+            <Education cursor={cursor.get('education')} />           
             <Languages data={cursor.get('languages').toJS()} />    
             <Interests data={cursor.get('interests').toJS()} />
             <References data={cursor.get('references').toJS()} />
