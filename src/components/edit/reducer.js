@@ -13,7 +13,7 @@ function editReducer (state, action) {
 }
 
 function editFields (state, path, fields, targetField) {
-    return !state.get('edit')
+    return !state.get('edit') && path && fields
         ? state.set('edit', fromJS({ path, fields, targetField }))
         : state.delete('edit')
 }

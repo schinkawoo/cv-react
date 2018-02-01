@@ -5,19 +5,25 @@ import EditButton from '../edit/button'
 import './style.css'
 import { connect } from 'react-redux';
 import { edit } from '../../components/edit/actions'
-import { fieldTypes } from '../fields'
+import { keyIn } from '../data'
 
-const Contact = ({ address, email, visa, phone, dispatch }) => {
-    return address || email || visa || phone ? (
-            <ContainerBlock type='contact'>
-                <Visa text={visa} />
-                <Phone text={phone} />
-                <Address address={address} />
-                <Email text={email} />
-                <EditButton inverted onClick={() => dispatch(edit(contactFields()))}/>
-            </ContainerBlock>
-        )
-        : null
+const Contact = ({ cursor, path = [], dispatch }) => {
+    const keys = [ 'visa', 'phone', 'address', 'email' ]
+    const { 
+        visa, 
+        phone,
+        email,
+        address
+    } = cursor.filter(keyIn(...keys)).toJS()
+    return (
+        <ContainerBlock type='contact'>
+            <Visa text={visa} />
+            <Phone text={phone} />
+            <Address {...address} />
+            <Email text={email} />
+            <EditButton inverted onClick={() => dispatch(edit(path, keys))}/>
+        </ContainerBlock>
+    )
 }
 
 function Visa ({ text }) {
@@ -38,7 +44,7 @@ function Email ({ text }) {
         : null
 }
 
-function Address ({ address: { street, number, city, postalCode, country }}) {
+function Address ({ street, number, city, postalCode, country }) {
     if (!street || !number || !city) return null
 
     const text = `${street} ${number}`
@@ -46,20 +52,11 @@ function Address ({ address: { street, number, city, postalCode, country }}) {
         + format(city)
         + format(country)
     
-        return <div className="address"><Icon name='location-arrow' />{text}</div> 
+        return <div className="address"><Icon name='location-arrow' />{text}</div>
 }
 
 function format (string) {
     return string ? `, ${string}` : ''
-}
-
-function contactFields () {
-    return {
-        address: fieldTypes.ADDRESS,
-        email: fieldTypes.TEXT,
-        phone: fieldTypes.TEXT,
-        visa: fieldTypes.TEXT
-    }
 }
 
 export default connect()(Contact)

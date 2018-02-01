@@ -22,12 +22,7 @@ class App extends Component {
                     <Container type="side">
                         <Profile cursor={this.props.cursor} />
                         
-                        <Contact 
-                            visa={this.props.cursor.get('visa')}
-                            phone={this.props.cursor.get('phone')}
-                            address={this.props.cursor.get('address').toJS()}
-                            email={this.props.cursor.get('email')}
-                        />
+                        <Contact cursor={this.props.cursor} />
                         <Hide xsmall>
                             {sidebarBottomAndFooterContent(this.props.cursor)}
                         </Hide>
