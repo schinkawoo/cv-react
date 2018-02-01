@@ -1,41 +1,25 @@
 import { types } from '../action-types'
-import deepMerge from 'deepmerge'
+import { fromJS } from 'immutable'
 
-function profile (state, action) {
+function editReducer (state, action) {
     switch (action.type) {
         case types.EDIT:
-            return editFields(state, action.path, action.fields)
-        case types.EDIT_CLOSE:
-            return updateFields(state, action.path, action.values)
+            return editFields(state, action.path, action.fields, action.targetField)
+        case types.UPDATE_PROPERTY:
+            return updateProperty(state, action.path, action.value)
         default:
             return state
     }
 }
 
-function editFields (state, path, fields) {
-    return !state.edit
-        ? {
-            ...state,
-            edit: {
-                path,
-                fields
-            }
-        }
-        : {
-            ...state,
-            edit: undefined
-        }
+function editFields (state, path, fields, targetField) {
+    return !state.get('edit')
+        ? state.set('edit', fromJS({ path, fields, targetField }))
+        : state.delete('edit')
 }
 
-function updateFields (state, path, values) {
-    const initialState = { ...state, edit: undefined }
-    const stateUpdate = path.reduce((acc, key, index, array) => {
-        return path.length === index - 1
-            ? { key: { ...values } }
-            : { ...acc, key: {} }
-    }, path.length === 0 ? { ...values } : {})
-
-    return deepMerge(initialState, stateUpdate)
+function updateProperty (state, path, value) {
+    return state.setIn(path, fromJS(value))
 }
 
-export default profile
+export default editReducer

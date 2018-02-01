@@ -1,22 +1,23 @@
 import { types } from '../action-types'
 
-function edit (fields, path = []) {
+function edit (path, fields, targetField) {
     return {
         type: types.EDIT,
         fields,
-        path
+        path,
+        targetField
     }
 }
 
-function closeEdit (values = {}, path) {
+function updateProperty (path, value) {
     return {
-        type: types.EDIT_CLOSE,
-        values,
+        type: types.UPDATE_PROPERTY,
+        value,
         path
     }
 }
 
 export {
     edit,
-    closeEdit
+    updateProperty
 }
