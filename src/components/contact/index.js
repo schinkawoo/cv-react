@@ -1,10 +1,8 @@
 import React from 'react'
 import Icon from 'react-fontawesome'
 import ContainerBlock from '../container/block'
-import EditButton from '../edit/button'
 import './style.css'
 import { connect } from 'react-redux';
-import { edit } from '../../components/edit/actions'
 import { keyIn } from '../data'
 
 const Contact = ({ cursor, path, dispatch }) => {
@@ -21,7 +19,6 @@ const Contact = ({ cursor, path, dispatch }) => {
             <Phone text={phone} />
             <Address {...address} />
             <Email text={email} />
-            <EditButton inverted onClick={() => dispatch(edit(path, keys))}/>
         </ContainerBlock>
     )
 }

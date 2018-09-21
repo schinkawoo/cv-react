@@ -50,6 +50,11 @@
     ],
     "references": [
         {
+            "name": "Ernest Galbrun",
+            "title": "Software Engineer",
+            "company": "Google"
+        },
+        {
             "name": "Dan Harabagiu",
             "title": "Head of Development",
             "company": "Ringier AG"
@@ -63,38 +68,67 @@
     "skills": [
         {
             "name": "Javascript",
-            "level": 95
-        },
-        {
-            "name": "HTML, CSS, SASS",
-            "level": 80
-        },
-        {
-            "name": "React",
-            "level": 95
-        },
-        {
-            "name": "React Native",
-            "level": 85
-        },
-        {
-            "name": "Node.ja",
             "level": 90
         },
         {
+            "name": "HTML, CSS, SASS",
+            "level": 90
+        },
+        {
+            "name": "Angular",
+            "level": 90
+        },
+        {
+            "name": "Typescript",
+            "level": 90
+        },
+        {
+            "name": "React",
+            "level": 85
+        },
+        {
+            "name": "React Native",
+            "level": 75
+        },
+        {
+            "name": "Node.ja",
+            "level": 85
+        },
+        {
             "name": "Java",
-            "level": 60
+            "level": 75
         },
         {
             "name": "Python",
-            "level": 60
+            "level": 55
         }
     ],
     "experiences": [
         {
             "title": "Senior Software Developer",
-            "startDate": "2016/10/01",
+            "startDate": "2018/03/11",
             "endDate": "Present",
+            "company": {
+                "name": "Addeco Group (for Google)",
+                "location": "Switzerland",
+                "url": "https://www.springprofessional.ch/en/aboutus"
+            },
+            "summary": "",
+            "projects": [
+                {
+                    "title": "Action Developer for Google Assistant",
+                    "summary": "",
+                    "tasks": [
+                        "Edit and create new actions for Google Assistant",
+                        "Enhance ability to scale creation of actions, by developing of action editor in Angular and Typescript"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Senior Software Developer",
+            "startDate": "2016/10/01",
+            "endDate": "2018/02/28",
             "company": {
                 "name": "Ringier AG",
                 "location": "Switzerland",
@@ -122,15 +156,6 @@
                     "tasks": [
                         "Core developer for responsive website (React)",
                         "Core developer for hybrid iOS-Android applications (React-Native)"
-                    ]
-                },
-                {
-                    "title": "Pulse-Live & Duwun mobile website",
-                    "summary": "",
-                    "tasks": [
-                        "Core developer for an extension of Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)",
-                        "Created highly scalable low latency production setup (AWS & CDN)",
-                        "Coached and mentored team members (Javascript & React)"
                     ]
                 }
             ]
@@ -181,18 +206,6 @@
                 "url": "http://new.abb.com/about/technology/corporate-research-centers/corporate-research-center-switzerland"
             },
             "summary": "Designed, analyzed and implemented a multipath protocol for the routing solution in power- line communication networks in a networking stack for embedded devices (C - Contiki OS). The protocol is an extension of RPL protocol for routing over Low Power and Lossy net- works.",
-            "projects": []
-        },
-        {
-            "title": "Internship in QA",
-            "startDate": "2012/07/01",
-            "endDate": "2012/12/31",
-            "company": {
-                "name": "SapientNitro",
-                "location": "Switzerland",
-                "url": ""
-            },
-            "summary": "Tested various software solutions and Home Network Devices for Sapient's clients (Swisscom and Audi), including IPTV, iOS, Android applications and web pages.",
             "projects": []
         }
     ],

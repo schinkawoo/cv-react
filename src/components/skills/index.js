@@ -1,10 +1,8 @@
 import React from 'react'
 import Skill from './skill'
 import Section from '../container/section'
-import EditButton from '../edit/button'
 import './style.css'
 import connect from 'react-redux/lib/connect/connect';
-import { edit } from '../edit/actions';
 
 const Skills = ({ cursor, path, dispatch }) => {
     if (!cursor || cursor.size === 0) return null
@@ -20,7 +18,6 @@ const Skills = ({ cursor, path, dispatch }) => {
                     />
                 )}
             </div>
-            <EditButton inverted onClick={() => dispatch(edit(path, ['skills']))} />
         </Section>
     )
 }

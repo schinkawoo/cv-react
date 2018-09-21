@@ -1,10 +1,8 @@
 import React from 'react'
 import Section from '../container/section'
-import EditButton from '../edit/button'
 import Job from './job'
 import './style.css'
 import connect from 'react-redux/lib/connect/connect';
-import { edit } from '../edit/actions';
 import { fromJS } from 'immutable';
 
 const Experiences = ({ cursor, path, dispatch, field, icon, title }) => cursor && cursor.size > 0
@@ -21,7 +19,6 @@ const Experiences = ({ cursor, path, dispatch, field, icon, title }) => cursor &
                     key={index} 
                 />
             )}
-            <EditButton inverted onClick={() => dispatch(edit(path, [field]))} />
         </Section>
     )
     : null

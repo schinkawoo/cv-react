@@ -1,0 +1,25 @@
+{
+    "experience": [
+        {
+            "title": "Internship in QA",
+            "startDate": "2012/07/01",
+            "endDate": "2012/12/31",
+            "company": {
+                "name": "SapientNitro",
+                "location": "Switzerland",
+                "url": ""
+            },
+            "summary": "Tested various software solutions and Home Network Devices for Sapient's clients (Swisscom and Audi), including IPTV, iOS, Android applications and web pages.",
+            "projects": []
+        },
+        {
+            "title": "Pulse-Live & Duwun mobile website",
+            "summary": "",
+            "tasks": [
+                "Core developer for an extension of Blick Sport App frontend stack, to serve as a mobile website (JavaScript & React)",
+                "Created highly scalable low latency production setup (AWS & CDN)",
+                "Coached and mentored team members (Javascript & React)"
+            ]
+        }
+    ]
+}

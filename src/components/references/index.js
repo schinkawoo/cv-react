@@ -1,9 +1,7 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
-import EditButton from '../edit/button'
 import './style.css'
 import { connect } from 'react-redux';
-import { edit } from '../edit/actions';
 
 const References = ({ cursor, path, dispatch }) => (
     <ContainerBlock icon='address-card-o' title='References' type='references'>
@@ -15,7 +13,6 @@ const References = ({ cursor, path, dispatch }) => (
                 key={index}
             />
         ))}
-        <EditButton inverted onClick={() => dispatch(edit(path, ['references']))} />
     </ContainerBlock>
 )
 

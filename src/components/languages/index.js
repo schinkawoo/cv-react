@@ -1,9 +1,7 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
-import EditButton from '../edit/button'
 import './style.css'
 import { connect } from 'react-redux';
-import { edit } from '../edit/actions';
 
 const Languages = ({ cursor, path, dispatch }) => {
     if (!cursor || cursor.size <= 0) return null
@@ -13,7 +11,6 @@ const Languages = ({ cursor, path, dispatch }) => {
             {cursor.toArray().map((item, index) => (
                 <Language name={item.get('language')} level={item.get('level')} key={index} />
             ))}
-            <EditButton inverted onClick={() => dispatch(edit(path, keys))} />
         </ContainerBlock>
     )
 }

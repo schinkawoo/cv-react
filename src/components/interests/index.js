@@ -1,9 +1,7 @@
 import React from 'react'
 import ContainerBlock from '../container/block'
-import EditButton from '../edit/button'
 import './style.css'
 import connect from 'react-redux/lib/connect/connect';
-import { edit } from '../edit/actions';
 
 function capitalize (string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
@@ -18,7 +16,6 @@ function interestItems (type, cursor) {
 const Interests = ({ cursor, path, dispatch, type = 'compact' }) => (
     <ContainerBlock icon='bicycle' type='interests' title='Interests'>
         {interestItems(type, cursor)}
-        <EditButton inverted onClick={() => dispatch(edit(path, ['interests']))} />
     </ContainerBlock>
 )
 
